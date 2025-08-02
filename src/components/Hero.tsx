@@ -4,11 +4,11 @@ import heroImage from "@/assets/sonicbuds-hero.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
       {/* Animated background elements */}
       <div className="absolute inset-0 bg-gradient-hero" />
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-glow rounded-full blur-3xl opacity-30" />
-      <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-gradient-glow rounded-full blur-3xl opacity-20" />
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-glow rounded-full blur-3xl opacity-10" />
+      <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-gradient-glow rounded-full blur-3xl opacity-10" />
       
       <div className="relative z-10 container mx-auto px-6 text-center">
         <motion.div
@@ -44,10 +44,10 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
           >
-            <Button variant="electric" size="lg" className="px-8 py-6 text-lg">
+            <Button variant="default" size="lg" className="px-8 py-6 text-lg bg-foreground text-background hover:bg-foreground/90">
               Order Now - $299
             </Button>
-            <Button variant="premium" size="lg" className="px-8 py-6 text-lg">
+            <Button variant="outline" size="lg" className="px-8 py-6 text-lg border-foreground text-foreground hover:bg-foreground hover:text-background">
               Watch Demo
             </Button>
           </motion.div>
@@ -64,7 +64,7 @@ const Hero = () => {
             <img 
               src={heroImage} 
               alt="SonicBuds Pro X" 
-              className="w-full h-auto rounded-2xl shadow-premium animate-glow-pulse"
+              className="w-full h-auto rounded-2xl shadow-premium animate-premium-glow"
             />
           </div>
         </motion.div>
